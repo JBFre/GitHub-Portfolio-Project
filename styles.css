@@ -1,0 +1,209 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set global styles for the body of the document */
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(1, 189, 16);
+    background-color: black;
+    background-image: url('./image.jpg');
+    background-size: cover;
+    background-position: auto;
+    background-repeat: no-repeat;
+}
+
+/* Styles for the sidebar */
+.sidebar {
+    height: 100vh;
+    width: 400px;
+    background-color: transparent;
+    padding: 25px;
+    position: fixed;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(1, 189, 16);
+    text-align: left;
+    transform: scale(1);
+    transform-origin: top left;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar h2::after {
+    content: "";
+    display: block;
+    width: calc(100% + 60px);
+    height: 1px;
+    margin-right: absolute;
+    background-color: rgb(1, 189, 16);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 20px;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: rgb(1, 189, 16);
+    font-size: 40px;
+}
+
+.sidebar li a:hover {
+    color: rgb(26, 16, 87);
+    font-weight: bold;
+}
+
+/* Styles for the content area */
+.content {
+    line-height: 1.5;
+    /* background-color: red; */
+    padding: 20px;
+    font-size: 30px;
+    display: flex;
+    align-items: flex-start; /* Change align-items to flex-start */
+    justify-content: center;
+    text-align: center;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Only translate horizontally */
+    zoom: 0.8; /* Adjust the zoom value as desired */
+    transform-origin: top left right;
+}
+
+/* Styles for the buttons */
+button.custom-button {
+    display: none;
+}
+
+/* Styles for the buttons in the Projects section */
+.projectsSection button.custom-button {
+    display: block;
+    width: 100%; /* Set the width to 100% */
+    padding: 10px 20px;
+    margin-bottom: 10px; /* Add margin-bottom for spacing between buttons */
+    color: rgb(1, 189, 16);
+    background-color: rgb(58, 57, 57);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.5;
+    transition: background-color 0.3s ease;
+}
+
+/* Styles for the buttons in the Projects section when hovered over */
+.projectsSection button.custom-button:hover {
+    background-color: #390464;
+}
+
+
+/* Styles for the "eye-movement-webpage" button */
+.projectsSection button.custom-button:nth-child(2) {
+    margin-top: 40px; /* Add additional margin-bottom */
+}
+
+
+/* Styles for the "eye-movement-webpage" button */
+.projectsSection button.custom-button:nth-child(3) {
+    margin-bottom: 40px; /* Add additional margin-bottom */
+}
+
+/* Styles for the "map-animation-webpage" button */
+.projectsSection button.custom-button:nth-child(5) {
+    margin-bottom: 40px; /* Add additional margin-bottom */
+}
+
+
+/* Styles for the buttons in the LinkedIn section */
+.linkedinSection button.custom-button{
+    display: block;
+    width: 100%; /* Set the width to 100% */
+    padding: 10px 20px;
+    margin-bottom: 10px; /* Add margin-bottom for spacing between buttons */
+    color: rgb(1, 189, 16);
+    background-color: rgb(58, 57, 57);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.5;
+    transition: background-color 0.3s ease;
+}
+
+/* Styles for the buttons in the LinkedIn section when hovered over */
+.linkedinSection button.custom-button:hover{
+    background-color: #390464;
+}
+
+.resumeSection button.custom-button {
+    display: block;
+    width: 100%; /* Set the width to 100% */
+    padding: 10px 20px;
+    margin-bottom: 10px; /* Add margin-bottom for spacing between buttons */
+    color: rgb(1, 189, 16);
+    background-color: rgb(58, 57, 57);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.5;
+    transition: background-color 0.3s ease;
+}
+
+.resumeSection button.custom-button:hover {
+    background-color: #390464;
+}
+
+.email-contact {
+    margin-top: auto; /* Move the email-contact section to the bottom */
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 189, 16);
+}
+
+.email-contact a {
+    color: rgb(1, 189, 16);
+}
+
+.email-contact a:hover {
+    color: rgb(26, 16, 87);
+    font-weight: bold;
+}
+
+.email-address {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 16px;
+    color: rgb(1, 189, 16);
+}
+
+.email-address a {
+    color: rgb(1, 189, 16);
+}
+
+.email-address a:hover {
+    color: rgb(26, 16, 87);
+    font-weight: bold;
+}

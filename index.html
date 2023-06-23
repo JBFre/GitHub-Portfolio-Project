@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub Portfolio Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>John B. Freibaum</h2>
+        <ul>
+            <li><a href="#" data-content="home">Home</a></li>
+            <li><a href="#" data-content="bio">Bio</a></li>
+            <li><a href="#" data-content="linkedin">LinkedIn</a></li>
+            <li><a href="#" data-content="projects">Projects</a></li>
+            <li><a href="#" data-content="resume">Resume</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div id="homeContent" class="homeSection" style="display: block;">
+            <h1>Welcome to my GitHub Portfolio Project</h1>
+            <div>
+                <p>Welcome to my personal website! I'm John B. Freibaum, a dedicated professional 
+                   with a passion for technology and innovation. As a software engineer, I believe 
+                   in creating technology that makes a difference in our world. On this site, you will 
+                   find information about me, my past projects, and my aspirations. Feel free to browse 
+                   around to know more about me and my work. I'm excited to share my journey with you!
+                </p>
+                <p>
+                    <button class="custom-button" onclick="window.open('https://www.linkedin.com/in/john-freibaum-5001b8185/', '_blank')">Visit my LinkedIn profile</button>
+                </p>
+            </div>
+        </div>
+
+        <div id="bioContent" class="bioSection" style="display: none;">
+            <h1>A Little About Me</h1>
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jS4aFq5-91M" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+                    web-share" allowfullscreen></iframe>
+            </p>
+            <div class="email-contact">
+
+                <button class="custom-button" onclick="window.location.href='mailto:John.Freibaum@gmail.com'">Email Me</button>
+            </div>
+        </div>
+
+        <div id="linkedinContent" class="linkedinSection" style="display: none;">
+            <h1>LinkedIn</h1>
+            <p>
+                <button class="custom-button" onclick="window.open('https://www.linkedin.com/in/john-freibaum-5001b8185/', '_blank')">Visit My LinkedIn Profile</button>
+            </p>
+        </div>
+
+        <div id="projectsContent" class="projectsSection" style="display: none;">
+            <h1>My Codio Projects</h1>
+
+            <button class="custom-button" onclick="window.open('https://github.com/JBFre/eye-movement-exercise.git', '_blank')">eye-movement-exercise source files</button>
+            <button class="custom-button" onclick="window.open('https://jbfre.github.io/eye-movement-exercise/', '_blank')">eye-movement-webpage</button>
+            <button class="custom-button" onclick="window.open('https://github.com/JBFre/map-animation.git', '_blank')">map-animation-exercise source files</button>
+            <button class="custom-button" onclick="window.open('https://jbfre.github.io/map-animation/', '_blank')">map-animation-webpage</button>
+            <button class="custom-button" onclick="window.open('https://github.com/JBFre/pacman-factory-exercise.git', '_blank')">pacmen-factory-exercise source files</button>
+            <button class="custom-button" onclick="window.open('https://jbfre.github.io/pacman-factory-exercise/', '_blank')">pacmen-factory-webpage</button>
+        </div>
+     
+        <div id="resumeContent" class="resumeSection" style="display: none;">
+            <h1>Resume</h1>
+            <p>
+                <button class="custom-button" onclick="window.open('./resume.pdf', '_blank')">View My Resume</button>
+                <button class="custom-button" onclick="window.location.href='mailto:John.Freibaum@gmail.com'">Email Me: John.Freibaum@gmail.com</button>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
