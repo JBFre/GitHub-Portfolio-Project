@@ -70,8 +70,8 @@ body {
 /* Styles for the content area */
 .content {
     line-height: 1.5;
-    /* background-color: red; */
-    padding: 20px;
+    width: 50%;
+    padding: 30px;
     font-size: 30px;
     display: flex;
     align-items: flex-start; /* Change align-items to flex-start */
@@ -113,23 +113,17 @@ button.custom-button {
     background-color: #390464;
 }
 
-
-/* Styles for the "eye-movement-webpage" button */
-.projectsSection button.custom-button:nth-child(2) {
-    margin-top: 40px; /* Add additional margin-bottom */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-/* Styles for the "eye-movement-webpage" button */
-.projectsSection button.custom-button:nth-child(3) {
-    margin-bottom: 40px; /* Add additional margin-bottom */
+.button-description {
+    font-size: 20px;
+    color: white;
+    text-align: center;
 }
-
-/* Styles for the "map-animation-webpage" button */
-.projectsSection button.custom-button:nth-child(5) {
-    margin-bottom: 40px; /* Add additional margin-bottom */
-}
-
 
 /* Styles for the buttons in the LinkedIn section */
 .linkedinSection button.custom-button{
@@ -174,7 +168,7 @@ button.custom-button {
 }
 
 .email-contact {
-    margin-top: auto; /* Move the email-contact section to the bottom */
+    margin-top: auto; 
     text-align: center;
     font-size: 16px;
     color: rgb(1, 189, 16);
@@ -207,3 +201,37 @@ button.custom-button {
     color: rgb(26, 16, 87);
     font-weight: bold;
 }
+
+.bioSection .email-address button.custom-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: rgb(1, 189, 16);
+    background-color: rgb(58, 57, 57);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1.5;
+    transition: background-color 0.3s ease;
+}
+
+.bioSection .email-address button.custom-button:hover {
+    background-color: #390464;
+}
+
+.bioSection .video-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .bioSection .email-address {
+    text-align: left;
+    position: relative;
+    margin-bottom: 100px; /* Adjust the desired negative margin value */
+  }
+
+  .bioSection .email-address h2{
+    margin-top: 50%;
+  }
+  

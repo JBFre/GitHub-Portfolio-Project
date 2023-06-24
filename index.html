@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GitHub Portfolio Project</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="sidebar">
@@ -37,14 +37,15 @@
             <h1>A Little About Me</h1>
             <p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/jS4aFq5-91M" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
-                    web-share" allowfullscreen></iframe>
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+                web-share" allowfullscreen></iframe>
             </p>
-            <div class="email-contact">
-
-                <button class="custom-button" onclick="window.location.href='mailto:John.Freibaum@gmail.com'">Email Me</button>
+            <div class="email-address">
+                <h2>Contact Information</h2>
+                <button class="custom-button" onclick="location.href='mailto:John.Freibaum@gmail.com';">Email Me: John.Freibaum@gmail.com</button>
             </div>
         </div>
+        
 
         <div id="linkedinContent" class="linkedinSection" style="display: none;">
             <h1>LinkedIn</h1>
@@ -56,11 +57,17 @@
         <div id="projectsContent" class="projectsSection" style="display: none;">
             <h1>My Codio Projects</h1>
 
+            <span class="button-description">Link to the source files for eye movement exercise</span>
             <button class="custom-button" onclick="window.open('https://github.com/JBFre/eye-movement-exercise.git', '_blank')">eye-movement-exercise source files</button>
+            <span class="button-description">Link to the webpage to run the eye-movement-exercise</span>
             <button class="custom-button" onclick="window.open('https://jbfre.github.io/eye-movement-exercise/', '_blank')">eye-movement-webpage</button>
+            <span class="button-description">Link to the source files for map animation exercise</span>
             <button class="custom-button" onclick="window.open('https://github.com/JBFre/map-animation.git', '_blank')">map-animation-exercise source files</button>
+            <span class="button-description">Link to the webpage for map animation exercise</span>
             <button class="custom-button" onclick="window.open('https://jbfre.github.io/map-animation/', '_blank')">map-animation-webpage</button>
+            <span class="button-description">Link to the source files for Pacmen Factory exercise</span>
             <button class="custom-button" onclick="window.open('https://github.com/JBFre/pacman-factory-exercise.git', '_blank')">pacmen-factory-exercise source files</button>
+            <span class="button-description">Link to the webpage for Pacmen Factory exercise</span>
             <button class="custom-button" onclick="window.open('https://jbfre.github.io/pacman-factory-exercise/', '_blank')">pacmen-factory-webpage</button>
         </div>
      
@@ -73,6 +80,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
