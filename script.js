@@ -1,38 +1,35 @@
-const sidebar = document.querySelector('.sidebar');
-const content = document.querySelector('.content');
-const mainContentSection = document.querySelector('#homeContent');
-const bioContentSection = document.querySelector('#bioContent');
-const linkedinContentSection = document.querySelector('#linkedinContent');
-const projectsContentSection = document.querySelector('#projectsContent');
-const resumeContentSection = document.querySelector('#resumeContent');
+document.addEventListener('DOMContentLoaded', function() {
+  const sidebar = document.querySelector('.sidebar');
+  const content = document.querySelector('.content');
+  const homeContentSection = document.querySelector('#homeContent');
+  const projectsContentSection = document.querySelector('#projectsContent');
 
-sidebar.addEventListener('click', handleSidebarClick);
+  // Hide projectsContentSection by default
+  projectsContentSection.style.display = 'none';
 
-function handleSidebarClick(event) {
-  const clickedElement = event.target;
+  sidebar.addEventListener('click', function(event) {
+    const clickedElement = event.target;
 
-  if (clickedElement.tagName === 'A') {
-    event.preventDefault();
+    if (clickedElement.tagName === 'A') {
+      event.preventDefault();
 
-    const contentType = clickedElement.getAttribute('data-content');
-    showContent(contentType);
-  }
-}
-
-function showContent(contentType) {
-  const contentMap = {
-    home: mainContentSection,
-    bio: bioContentSection,
-    linkedin: linkedinContentSection,
-    projects: projectsContentSection,
-    resume: resumeContentSection,
-  };
-
-  Object.values(contentMap).forEach((section) => {
-    section.style.display = 'none';
+      const contentType = clickedElement.getAttribute('data-content');
+      showContent(contentType);
+    }
   });
 
-  if (contentMap.hasOwnProperty(contentType)) {
-    contentMap[contentType].style.display = 'block';
+  function showContent(contentType) {
+    const contentMap = {
+      home: homeContentSection,
+      projects: projectsContentSection,
+    };
+
+    Object.values(contentMap).forEach((section) => {
+      section.style.display = 'none';
+    });
+
+    if (contentMap.hasOwnProperty(contentType)) {
+      contentMap[contentType].style.display = 'block';
+    }
   }
-}
+});

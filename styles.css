@@ -1,237 +1,186 @@
-/* Reset default margin and padding for all elements */ 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-/* Set global styles for the body of the document */
 body {
-    font-family: Arial, sans-serif;
-    color: rgb(1, 189, 16);
-    background-color: black;
-    background-image: url('https://images.hdqwalls.com/wallpapers/3d-abstract-red-cgi-digital-art-4k-hr.jpg');
-    background-size: cover;
-    background-position: auto;
-    background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: rgb(1, 189, 16);
+  background-color: black;
+  background-image: url('https://images.hdqwalls.com/wallpapers/3d-abstract-red-cgi-digital-art-4k-hr.jpg');
+  background-size: cover;
+  background-position: auto;
+  background-repeat: no-repeat;
 }
 
-/* Styles for the sidebar */
 .sidebar {
-    height: 100vh;
-    width: 400px;
-    background-color: transparent;
-    padding: 25px;
-    position: fixed;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(1, 189, 16);
-    text-align: left;
-    transform: scale(1);
-    transform-origin: top left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 400px;
+  background-color: transparent;
+  padding: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #01bd10;
+  text-align: left;
+  overflow-y: auto;
 }
 
 .sidebar h2 {
-    margin-bottom: 20px;
-    font-size: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin-bottom: 20px;
+  font-size: 50px;
+  position: relative;
 }
 
 .sidebar h2::after {
-    content: "";
-    display: block;
-    width: calc(100% + 60px);
-    height: 1px;
-    margin-right: absolute;
-    background-color: rgb(1, 189, 16);
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #141414;
+  width: 500px; 
+  margin-left: -30px; 
+  margin-right: 30px; 
 }
 
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
+.sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -100px; 
+  width: 5px;
+  height: 100%;
+  margin-right: 100px; 
+  background-color: #141414;
 }
 
+.sidebar ul,
 .sidebar li {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none; 
 }
 
 .sidebar li a {
-    text-decoration: none;
-    color: rgb(1, 189, 16);
-    font-size: 40px;
+  text-decoration: none;
+  color: #01bd10;
+  font-size: 40px;
 }
 
 .sidebar li a:hover {
-    color: rgb(26, 16, 87);
-    font-weight: bold;
+  color: #1a1057;
+  font-weight: bold;
 }
 
-/* Styles for the content area */
 .content {
-    line-height: 1.5;
-    width: 50%;
-    padding: 30px;
-    font-size: 30px;
-    display: flex;
-    align-items: flex-start; /* Change align-items to flex-start */
-    justify-content: center;
-    text-align: center;
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Only translate horizontally */
-    zoom: 0.8; /* Adjust the zoom value as desired */
-    transform-origin: top left right;
+  overflow: auto;
+  position: fixed;
+  display: grid;
+  margin-left: 20px;
+  top: 0;
+  left: 400px;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  font-size: 30px;
+  box-sizing: border-box;
 }
 
-/* Styles for the buttons */
-button.custom-button {
-    display: none;
+.homeSection h1 {
+  font-size: 50px; 
+  text-align: center;
 }
 
-/* Styles for the buttons in the Projects section */
-.projectsSection button.custom-button {
-    display: block;
-    width: 100%; /* Set the width to 100% */
-    padding: 10px 20px;
-    margin-bottom: 10px; /* Add margin-bottom for spacing between buttons */
-    color: rgb(1, 189, 16);
-    background-color: rgb(58, 57, 57);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 1.5;
-    transition: background-color 0.3s ease;
+.homeSection h2 {
+  font-size: 50px;
+  text-align: left;
 }
 
-/* Styles for the buttons in the Projects section when hovered over */
-.projectsSection button.custom-button:hover {
-    background-color: #390464;
+.bio h3 {
+  font-size: 50px;
+  text-align: left;
+  margin-top: 10%;
+}
+
+.video-grid h3 {
+  font-size: 50px;
+  margin-top: 10%;
+}
+
+.homeSection p {
+  font-size: 40px;
 }
 
 .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.button-description {
-    font-size: 20px;
-    color: white;
-    text-align: center;
+.button-container h2 {
+  font-size: 50px;
 }
 
-/* Styles for the buttons in the LinkedIn section */
-.linkedinSection button.custom-button{
-    display: block;
-    width: 100%; /* Set the width to 100% */
-    padding: 10px 20px;
-    margin-bottom: 10px; /* Add margin-bottom for spacing between buttons */
-    color: rgb(1, 189, 16);
-    background-color: rgb(58, 57, 57);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 1.5;
-    transition: background-color 0.3s ease;
+.button-container a {
+  width: 40%;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  color: #01bd10;
+  background-color: #3a3939;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 1.5;
+  transition: background-color 0.3s ease;
 }
 
-/* Styles for the buttons in the LinkedIn section when hovered over */
-.linkedinSection button.custom-button:hover{
-    background-color: #390464;
+.button-container a:hover {
+  background-color: #390464;
 }
 
-.resumeSection button.custom-button {
-    display: block;
-    width: 100%; /* Set the width to 100% */
-    padding: 10px 20px;
-    margin-bottom: 10px; /* Add margin-bottom for spacing between buttons */
-    color: rgb(1, 189, 16);
-    background-color: rgb(58, 57, 57);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 1.5;
-    transition: background-color 0.3s ease;
+.bio img {
+  width: 20%;
+  height: auto;
+  margin-bottom: 10%;
+  margin-top: 1%;
 }
 
-.resumeSection button.custom-button:hover {
-    background-color: #390464;
+.projectsSection h1 {
+  margin-bottom: 10%;
+  font-size: 50px;
+  text-align: center;
 }
 
-.email-contact {
-    margin-top: auto; 
-    text-align: center;
-    font-size: 16px;
-    color: rgb(1, 189, 16);
+.projects .button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.email-contact a {
-    color: rgb(1, 189, 16);
+.projects .button-container h2 {
+  font-size: 50px;
 }
 
-.email-contact a:hover {
-    color: rgb(26, 16, 87);
-    font-weight: bold;
+.projects .button-container a {
+  width: 40%;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  color: #01bd10;
+  background-color: #3a3939;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 1.5;
+  transition: background-color 0.3s ease;
 }
 
-.email-address {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-size: 16px;
-    color: rgb(1, 189, 16);
+.projects .button-container a:hover {
+  background-color: #390464;
 }
-
-.email-address a {
-    color: rgb(1, 189, 16);
-}
-
-.email-address a:hover {
-    color: rgb(26, 16, 87);
-    font-weight: bold;
-}
-
-.bioSection .email-address button.custom-button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    color: rgb(1, 189, 16);
-    background-color: rgb(58, 57, 57);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 1.5;
-    transition: background-color 0.3s ease;
-}
-
-.bioSection .email-address button.custom-button:hover {
-    background-color: #390464;
-}
-
-.bioSection .video-wrapper {
-    margin-bottom: 20px;
-  }
-  
-  .bioSection .email-address {
-    text-align: left;
-    position: relative;
-    margin-bottom: 100px; /* Adjust the desired negative margin value */
-  }
-
-  .bioSection .email-address h2{
-    margin-top: 50%;
-  }
-  
