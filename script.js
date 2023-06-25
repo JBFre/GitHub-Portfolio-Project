@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   const sidebar = document.querySelector('.sidebar');
-  const content = document.querySelector('.content');
   const homeContentSection = document.querySelector('#homeContent');
   const projectsContentSection = document.querySelector('#projectsContent');
+  const contentSections = [homeContentSection, projectsContentSection];
 
   // Hide projectsContentSection by default
   projectsContentSection.style.display = 'none';
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Update the URL using history.pushState()
       const url = clickedElement.href;
       const pageTitle = document.title;
-      history.pushState(null, pageTitle, url);
+      history.pushState({contentType: contentType}, pageTitle, url);
     }
   });
 
@@ -29,17 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
       projects: projectsContentSection,
     };
 
-    Object.values(contentMap).forEach((section) => {
+    contentSections.forEach((section) => {
       section.style.display = 'none';
     });
 
     if (contentMap.hasOwnProperty(contentType)) {
       contentMap[contentType].style.display = 'block';
+      contentMap[contentType].scrollIntoView();
     }
   }
 
   window.addEventListener('popstate', function(event) {
-    // Refresh the page to go back to the original page
-    location.reload();
+    const contentType = event.state ? event.state.contentType : 'home';
+    showContent(contentType);
   });
 });
