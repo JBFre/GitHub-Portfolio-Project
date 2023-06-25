@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const contentType = clickedElement.getAttribute('data-content');
       showContent(contentType);
+
+      // Update the URL using history.pushState()
+      const url = clickedElement.href;
+      const pageTitle = document.title;
+      history.pushState(null, pageTitle, url);
     }
   });
 
@@ -32,4 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
       contentMap[contentType].style.display = 'block';
     }
   }
+
+  window.addEventListener('popstate', function(event) {
+    // Refresh the page to go back to the original page
+    location.reload();
+  });
 });
