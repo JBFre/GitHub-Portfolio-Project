@@ -7,7 +7,7 @@ body {
   font-family: Arial, sans-serif;
   color: rgb(1, 189, 16);
   background-color: black;
-  background-image: url('https://images.hdqwalls.com/wallpapers/3d-abstract-red-cgi-digital-art-4k-hr.jpg');
+  background-image: url('./image_1.jpg');
   background-size: contain;
   background-size: cover;
   background-position: auto;
@@ -21,7 +21,7 @@ body {
   height: auto;
   width: auto;
   background-color: transparent;
-  background-image: url('https://images.hdqwalls.com/wallpapers/cosmos-planet-5k-nv.jpg');
+  background-image: url('./image_2.jpg');
   background-repeat: no-repeat;
   padding: 25px;
   font-family: 'Times New Roman', Times, serif;
