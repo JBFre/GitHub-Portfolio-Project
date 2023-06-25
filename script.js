@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const projectsContentSection = document.querySelector('#projectsContent');
   const contentSections = [homeContentSection, projectsContentSection];
 
-  // Hide projectsContentSection by default
   projectsContentSection.style.display = 'none';
 
   sidebar.addEventListener('click', function(event) {
@@ -16,10 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const contentType = clickedElement.getAttribute('data-content');
       showContent(contentType);
 
-      // Update the URL using history.pushState()
       const url = clickedElement.href;
       const pageTitle = document.title;
-      history.pushState({contentType: contentType}, pageTitle, url);
+      history.pushState({ contentType: contentType }, pageTitle, url);
     }
   });
 
@@ -35,12 +33,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (contentMap.hasOwnProperty(contentType)) {
       contentMap[contentType].style.display = 'block';
-      contentMap[contentType].scrollIntoView();
+      if (contentType === 'home') {
+        window.scrollTo(0, 0);
+      }
     }
   }
 
   window.addEventListener('popstate', function(event) {
     const contentType = event.state ? event.state.contentType : 'home';
     showContent(contentType);
+  });
+
+  window.addEventListener('mousemove', function(event) {
+    if (event.clientX <= 50) {
+      document.body.style.overflowY = 'auto';
+    } else {
+      document.body.style.overflowY = 'hidden';
+    }
+  });
+
+  // Scroll to the top of the page on page load
+  window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
   });
 });
