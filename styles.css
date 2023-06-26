@@ -8,7 +8,6 @@ body {
   color: rgb(1, 189, 16);
   background-color: black;
   background-image: url('./image_1.jpg');
-  background-size: contain;
   background-size: cover;
   background-position: auto;
   background-repeat: no-repeat;
@@ -16,14 +15,14 @@ body {
 
 .sidebar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 3%;
+  left: 3%;
   height: auto;
   width: auto;
+  padding: 25px;
   background-color: transparent;
   background-image: url('./image_2.jpg');
   background-repeat: no-repeat;
-  padding: 25px;
   font-family: 'Times New Roman', Times, serif;
   color: #01bd10;
   text-align: left;
@@ -71,7 +70,7 @@ body {
   position: fixed;
   top: 0;
   left: 400px;
-  margin-left: -400px;
+  margin-left: -500px;
   margin-top: -450px;
   right: 0;
   bottom: 0;
@@ -85,28 +84,9 @@ body {
   grid-row: 1 / 3;
 }
 
-.homeSection h1 {
-  font-size: 50px;
-  text-align: center;
-}
-
-.homeSection p {
-  font-size: 30px !important;
-  text-align: left;
-  margin-left: 0px;
-  margin-right: 0px;
-  text-indent: 40px;
-}
-
 .bio {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
-}
-
-.bio h3 {
-  font-size: 50px;
-  text-align: left;
-  margin-top: 5%;
 }
 
 .bio .button-container a {
@@ -126,17 +106,17 @@ body {
   height: 100%;
 }
 
+.bio h3, 
 .video-grid h3 {
-  font-size: 50px;
+  font-size: 40px;
   text-align: left;
   margin-top: 5%;
-  margin-right: 500px;
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start;  
 }
 
 .button-container h2 {
@@ -144,7 +124,7 @@ body {
 }
 
 .button-container a {
-  width: auto%;
+  width: auto;
   padding: 5px 10px;
   margin-bottom: 5px;
   color: #01bd10;
@@ -157,7 +137,7 @@ body {
   line-height: 1.5;
   transition: background-color 0.3s ease;
   position: relative;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px rgba(224, 34, 34, 0.2);
 }
 
 .button-container a:active {
@@ -166,7 +146,7 @@ body {
 }
 
 .button-container a:hover {
-  background-color: #390464;
+  background-color: #0a0258;
 }
 
 .projectsSection {
@@ -174,19 +154,22 @@ body {
   grid-row: 1 / 3;
 }
 
+.homeSection h1,
 .projectsSection h1 {
   font-size: 50px;
   text-align: center;
 }
 
+.homeSection p,
 .projectsSection p {
   font-size: 30px !important;
   text-align: left;
   margin-left: 0px;
-  margin-right: 0px;
+  margin-right: -200px;
   color: #01bd10;
   text-indent: 40px;
   margin-bottom: 5%;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .projectsSection p1 {
@@ -194,15 +177,23 @@ body {
 }
 
 .projectsSection .button-container {
-  margin-top: 40px;
+  margin-top: 70px;
 }
 
-.projectsSection .button-container p1 {
+.button-container p1 {
   font-size: 20px;
+  margin-bottom: 5px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+.homeSection .button-container p1 {
+  margin-left: 0px;
 }
 
 .bio img {
-  width: 20%;
+  width: auto;
   height: auto;
   margin-bottom: 5%;
   margin-top: 1%;
@@ -224,12 +215,12 @@ body {
 }
 
 .custom-button {
-  padding: 10px 15px;
-  color: #fff;
+  padding: 5px 10px;
+  color: #0f0e0e;
   background-color: #0e2842;
   border: 5px solid black;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 1px;
   cursor: pointer;
   outline: none;
   position: relative;
@@ -242,10 +233,12 @@ body {
   transform: translateY(5px);
 }
 
-#homeContent, #projectsContent {
+#homeContent,
+#projectsContent {
   display: none;
 }
 
-#homeContent.active, #projectsContent.active {
+#homeContent.active,
+#projectsContent.active {
   display: block;
 }

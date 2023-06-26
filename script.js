@@ -22,7 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
       const contentType = clickedElement.getAttribute('data-content');
 
-      Object.values(contentMap).forEach(content => content.classList.remove('active'));
+      Object.values(contentMap).forEach(content => {
+        content.classList.remove('active');
+        content.scrollTop = 0; // Scroll to top of each section
+      });
+      
       contentMap[contentType].classList.add('active');
       location.hash = contentType;
     }
@@ -31,10 +35,14 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('popstate', function(event) {
     const contentType = location.hash.substr(1) || 'home';
 
-    Object.values(contentMap).forEach(content => content.classList.remove('active'));
+    Object.values(contentMap).forEach(content => {
+      content.classList.remove('active');
+      content.scrollTop = 0; // Scroll to top of each section
+    });
 
     if (contentMap.hasOwnProperty(contentType)) {
       contentMap[contentType].classList.add('active');
     }
+    document.body.style.zoom = "100%";
   });
 });
