@@ -2,9 +2,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const sidebar = document.querySelector('.sidebar');
   const homeContentSection = document.querySelector('#homeContent');
   const projectsContentSection = document.querySelector('#projectsContent');
-  const contentSections = [homeContentSection, projectsContentSection];
 
-  projectsContentSection.style.display = 'none';
+  const contentMap = {
+    home: homeContentSection,
+    projects: projectsContentSection,
+  };
+
+  let currentContentType = location.hash.substr(1) || 'home';
+
+  if (contentMap.hasOwnProperty(currentContentType)) {
+    contentMap[currentContentType].classList.add('active');
+  }
 
   sidebar.addEventListener('click', function(event) {
     const clickedElement = event.target;
@@ -13,47 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
       event.preventDefault();
 
       const contentType = clickedElement.getAttribute('data-content');
-      showContent(contentType);
 
-      const url = clickedElement.href;
-      const pageTitle = document.title;
-      history.pushState({ contentType: contentType }, pageTitle, url);
+      Object.values(contentMap).forEach(content => content.classList.remove('active'));
+      contentMap[contentType].classList.add('active');
+      location.hash = contentType;
     }
   });
-
-  function showContent(contentType) {
-    const contentMap = {
-      home: homeContentSection,
-      projects: projectsContentSection,
-    };
-
-    contentSections.forEach((section) => {
-      section.style.display = 'none';
-    });
-
-    if (contentMap.hasOwnProperty(contentType)) {
-      contentMap[contentType].style.display = 'block';
-      if (contentType === 'home') {
-        window.scrollTo(0, 0);
-      }
-    }
-  }
 
   window.addEventListener('popstate', function(event) {
-    const contentType = event.state ? event.state.contentType : 'home';
-    showContent(contentType);
-  });
+    const contentType = location.hash.substr(1) || 'home';
 
-  window.addEventListener('mousemove', function(event) {
-    if (event.clientX <= 50) {
-      document.body.style.overflowY = 'auto';
-    } else {
-      document.body.style.overflowY = 'hidden';
+    Object.values(contentMap).forEach(content => content.classList.remove('active'));
+
+    if (contentMap.hasOwnProperty(contentType)) {
+      contentMap[contentType].classList.add('active');
     }
-  });
-
-  // Scroll to the top of the page on page load
-  window.addEventListener('load', function() {
-    window.scrollTo(0, 0);
   });
 });
