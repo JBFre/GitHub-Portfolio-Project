@@ -172,7 +172,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.projectsSection p1 {
+.projectsSection h4 {
   margin-right: 65%;
 }
 
@@ -180,7 +180,7 @@ body {
   margin-top: 70px;
 }
 
-.button-container p1 {
+.button-container h4 {
   font-size: 20px;
   margin-bottom: 5px;
   text-align: left;
@@ -188,7 +188,7 @@ body {
 
 }
 
-.homeSection .button-container p1 {
+.homeSection .button-container h4 {
   margin-left: 0px;
 }
 
