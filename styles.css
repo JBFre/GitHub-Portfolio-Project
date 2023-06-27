@@ -5,13 +5,16 @@
 
 @keyframes colorFade {
   0% {
-    color: #8aff8a; /* Start with green */
+    color: #8aff8a;
   }
   50% {
-    color: #008a00; /* Transition to blue */
+    color: #008a00;
   }
   100% {
-    color: #8aff8a;; /* Transition back to green */
+    color: #8aff8a;
+  }
+  50% {
+    color: #008a00; 
   }
 }
 
