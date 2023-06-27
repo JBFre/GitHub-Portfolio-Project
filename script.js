@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+  /*document.body.style.zoom = (window.innerWidth / document.documentElement.clientWidth) * 100 + "%";*/ // Set zoom level based on window width
+
   const sidebar = document.querySelector('.sidebar');
   const homeContentSection = document.querySelector('#homeContent');
   const projectsContentSection = document.querySelector('#projectsContent');
@@ -26,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         content.classList.remove('active');
         content.scrollTop = 0; // Scroll to top of each section
       });
-      
+
       contentMap[contentType].classList.add('active');
       location.hash = contentType;
     }
@@ -43,6 +45,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contentMap.hasOwnProperty(contentType)) {
       contentMap[contentType].classList.add('active');
     }
-    document.body.style.zoom = "100%";
   });
 });
