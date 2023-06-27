@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  /*document.body.style.zoom = (window.innerWidth / document.documentElement.clientWidth) * 100 + "%";*/ // Set zoom level based on window width
 
   const sidebar = document.querySelector('.sidebar');
   const homeContentSection = document.querySelector('#homeContent');
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       Object.values(contentMap).forEach(content => {
         content.classList.remove('active');
-        content.scrollTop = 0; // Scroll to top of each section
+        content.scrollTop = 0; 
       });
 
       contentMap[contentType].classList.add('active');
@@ -39,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     Object.values(contentMap).forEach(content => {
       content.classList.remove('active');
-      content.scrollTop = 0; // Scroll to top of each section
+      content.scrollTop = 0; 
     });
 
     if (contentMap.hasOwnProperty(contentType)) {
