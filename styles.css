@@ -3,6 +3,18 @@
   padding: 0;
 }
 
+@keyframes colorFade {
+  0% {
+    color: #8aff8a; /* Start with green */
+  }
+  50% {
+    color: #008a00; /* Transition to blue */
+  }
+  100% {
+    color: #8aff8a;; /* Transition back to green */
+  }
+}
+
 body {
   font-family: Arial, sans-serif;
   color: rgb(1, 189, 16);
@@ -112,6 +124,11 @@ body {
   font-size: 40px;
   text-align: left;
   margin-top: 5%;
+  animation: colorFade 3s infinite alternate;
+}
+
+.bio .button-container h2 {
+  animation: colorFade 3s infinite alternate;
 }
 
 .button-container {
@@ -122,6 +139,7 @@ body {
 
 .button-container h2 {
   font-size: 40px;
+  animation: colorFade 3s infinite alternate;
 }
 
 .button-container a {
@@ -171,7 +189,7 @@ body {
   text-indent: 40px;
   margin-bottom: 5%;
   font-family: 'Times New Roman', Times, serif;
-}
+ }
 
 .projectsSection h4 {
   margin-right: 65%;
@@ -186,7 +204,6 @@ body {
   margin-bottom: 5px;
   text-align: left;
   font-family: 'Times New Roman', Times, serif;
-
 }
 
 .homeSection .button-container h4 {
