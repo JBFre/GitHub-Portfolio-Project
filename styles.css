@@ -127,11 +127,6 @@ body {
   font-size: 40px;
   text-align: left;
   margin-top: 5%;
-  animation: colorFade 3s infinite alternate;
-}
-
-.bio .button-container h2 {
-  animation: colorFade 3s infinite alternate;
 }
 
 .button-container {
@@ -142,7 +137,6 @@ body {
 
 .button-container h2 {
   font-size: 40px;
-  animation: colorFade 3s infinite alternate;
 }
 
 .button-container a {
@@ -160,6 +154,7 @@ body {
   transition: background-color 0.3s ease;
   position: relative;
   box-shadow: 5px 5px 5px rgba(224, 34, 34, 0.2);
+  animation: colorFade 3s infinite alternate;
 }
 
 .button-container a:active {
