@@ -1,8 +1,10 @@
+/* Reset styles for all elements */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Keyframes for button color fade animation */
 @keyframes colorFade {
   0% {
     color: #8aff8a;
@@ -18,17 +20,19 @@
   }
 }
 
+/* Body styles */
 body {
   font-family: Arial, sans-serif;
   color: rgb(1, 189, 16);
   background-color: black;
-  background-image: url('./image_1.jpg');
+  background-image: url('./images/image_1.jpg');
   background-size: cover;
   background-position: auto;
   background-repeat: no-repeat;
   zoom: 100%;
 }
 
+/* Sidebar styles */
 .sidebar {
   position: fixed;
   top: 3%;
@@ -37,10 +41,10 @@ body {
   width: auto;
   padding: 25px;
   background-color: transparent;
-  background-image: url('./image_2.jpg');
+  background-image: url('./images/image_2.jpg');
   background-repeat: no-repeat;
   font-family: 'Times New Roman', Times, serif;
-  color: #01bd10;
+  color: #070977;
   text-align: left;
   border: 3px solid #01bd10;
   z-index: 1000;
@@ -69,15 +73,16 @@ body {
 
 .sidebar li a {
   text-decoration: none;
-  color: #01bd10;
+  color:  #070977;
   font-size: 40px;
 }
 
 .sidebar li a:hover {
-  color: #1a1057;
+  color: #01bd10;
   font-weight: bold;
 }
 
+/* Main Content styles */
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -95,11 +100,13 @@ body {
   box-sizing: border-box;
 }
 
+/* Home Section styles */
 .homeSection {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
 }
 
+/* Bio Section styles */
 .bio {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
@@ -137,6 +144,7 @@ body {
 
 .button-container h2 {
   font-size: 40px;
+  color:  #01bd10;
 }
 
 .button-container a {
@@ -166,18 +174,17 @@ body {
   background-color: #0a0258;
 }
 
+/* Projects Section styles */
 .projectsSection {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
 }
 
-.homeSection h1,
 .projectsSection h1 {
   font-size: 50px;
   text-align: center;
 }
 
-.homeSection p,
 .projectsSection p {
   font-size: 30px !important;
   text-align: left;
@@ -187,7 +194,7 @@ body {
   text-indent: 40px;
   margin-bottom: 5%;
   font-family: 'Times New Roman', Times, serif;
- }
+}
 
 .projectsSection h4 {
   margin-right: 65%;
@@ -230,6 +237,7 @@ body {
   }
 }
 
+/* Custom button styles */
 .custom-button {
   padding: 5px 10px;
   color: #0f0e0e;
@@ -249,11 +257,13 @@ body {
   transform: translateY(5px);
 }
 
+/* Controls the display of the home and projects sections */
 #homeContent,
 #projectsContent {
   display: none;
 }
 
+/* Controls the display of the active home and projects sections */
 #homeContent.active,
 #projectsContent.active {
   display: block;
