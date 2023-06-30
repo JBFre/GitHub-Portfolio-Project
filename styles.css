@@ -220,12 +220,14 @@ body {
 .button-container h4 {
   font-size: 20px;
   margin-bottom: 5px;
+  
+  
   text-align: left;
   font-family: 'Times New Roman', Times, serif;
 }
 
 .homeSection .button-container h4 {
-  margin-left: 0px;
+  margin-left: 4px;
 }
 
 .bio img {
